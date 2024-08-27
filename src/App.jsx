@@ -1,6 +1,6 @@
 import { useState } from "react"
 import "./assets/scss/main.scss"
-import StepBlock from "./components/stepBlock"
+import StepBlock from "./components/StepBlock"
 import MainBlock from './components/MainBlock'
 const initialSteps = [
     {
