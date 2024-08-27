@@ -1,0 +1,75 @@
+.finish-list {
+  background-color: map-get($page-colors, "--switch-container");
+  border-radius: 8px;
+  padding: 15px 20px;
+}
+
+.finish-list__second-page {
+  @include flexDirection(null, null, space-between, center, null);
+  padding-bottom: 20px;
+  border-bottom: 1px solid map-get($page-colors, "--finish-page-border");
+}
+
+.finish-list__second-left p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: map-get($page-colors, "--black-text");
+  margin-bottom: 5px;
+}
+
+.finish-list__second-left span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: underline;
+  color: map-get($page-colors, "--gray-text");
+  cursor: pointer;
+}
+
+.finish-list__second-right {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: map-get($page-colors, "--black-text");
+}
+
+.finish-list__third-item {
+  @include flexDirection(null, null, space-between, center, null);
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.finish-list__third-item p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: map-get($page-colors, "--gray-text");
+}
+
+.finish-list__third-item div {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.finish-total {
+  @include flexDirection(null, null, space-between, center, null);
+  padding: 20px;
+}
+
+.finish-total p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: map-get($page-colors, "--gray-text");
+}
+
+.finish-total div {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  color: map-get($page-colors, "--step-block-background");
+}

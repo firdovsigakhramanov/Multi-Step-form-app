@@ -1,0 +1,21 @@
+$btnColor: (
+  "--btn-primary": rgb(2, 41, 89),
+  "--btn-secondary-text": rgba(255, 255, 255),
+  "--btn-secondary": rgb(72, 62, 255),
+  "--btn-primary-text": rgb(150, 153, 170),
+);
+
+$page-colors: (
+  "--body-background": rgb(242, 242, 242),
+  "--gray-text": rgb(150, 153, 170),
+  "--white-text": rgba(255, 255, 255),
+  "--black-text": rgb(2, 41, 89),
+  "--sky-blue": rgb(190, 226, 253),
+  "--pink": rgb(233, 97, 112),
+  "--step-block-background": rgb(72, 62, 255),
+  "--step-text-primary": rgb(171, 188, 255),
+  "--input-box-shadow": rgb(214, 217, 230),
+  "--switch-container": rgb(248, 249, 255),
+  "--body-shadow": 0px 25px 40px -20px rgba(0, 0, 0, 0.1),
+  "--finish-page-border": rgb(150, 153, 170, 0.2),
+);

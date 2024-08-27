@@ -1,0 +1,3 @@
+.pick-add-ons__container {
+  @include flexDirection(column, null, null, null, 15px);
+}

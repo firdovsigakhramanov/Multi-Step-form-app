@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 12px;
+}
+
+.container {
+  background-color: map-get($page-colors, "--body-background");
+  height: 100vh;
+  padding-top: 50px;
+}
+
+.form-container {
+  width: 60%;
+  height: 600px;
+  background-color: map-get($page-colors, "--white-text");
+  margin: 0 auto;
+  display: flex;
+  border-radius: 15px;
+  padding: 16px;
+}
+
+@media screen and (max-width: 568px) {
+  .form-container {
+    width: 100%;
+    background-color: map-get($page-colors, "--body-background");
+  }
+
+  .container {
+    position: relative;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

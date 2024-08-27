@@ -1,0 +1,38 @@
+.step-container {
+  @include flexDirection(null, null, null, center, 15px);
+  color: map-get($page-colors, "--white-text");
+  font-weight: 700;
+}
+
+.step-container__left-side {
+  padding: 7px 10.6px;
+  font-size: 14px;
+  border: 1px solid map-get($page-colors, "--white-text");
+  border-radius: 50%;
+}
+
+.step-container__left-side.active {
+  background-color: map-get($page-colors, "--sky-blue");
+  color: map-get($page-colors, "--black-text");
+}
+
+.step-container__right-side p {
+  color: map-get($page-colors, "--step-text-primary");
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.step-container__right-side span {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 568px) {
+  .step-container__right-side p {
+    display: none;
+  }
+
+  .step-container__right-side span {
+    display: none;
+  }
+}

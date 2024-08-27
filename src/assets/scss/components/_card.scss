@@ -1,0 +1,67 @@
+.card {
+  width: 30%;
+  border: 1px solid map-get($page-colors, "--input-box-shadow");
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.card:hover {
+  border: 1px solid map-get($page-colors, "--step-block-background");
+  background-color: map-get($page-colors, "--switch-container");
+}
+
+.card.active {
+  border: 1px solid map-get($page-colors, "--step-block-background");
+  background-color: map-get($page-colors, "--switch-container");
+}
+
+.card-img {
+  width: 40px;
+  height: 40px;
+  @include flexDirection(row, null, center, center, null);
+  border-radius: 50%;
+}
+
+.card-main {
+  margin-top: 40px;
+  @include flexDirection(column, null, null, null, 6px);
+}
+
+.card-main h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: map-get($page-colors, "--black-text");
+}
+
+.card-main p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: map-get($page-colors, "--gray-text");
+}
+
+.card-main span {
+  font-weight: 400;
+  line-height: 14px;
+  color: map-get($page-colors, "--black-text");
+}
+
+@media screen and (max-width: 568px) {
+  .card {
+    width: 100%;
+    @include flexDirection(null, null, null, center, 20px);
+  }
+
+  .card-img{
+    width: 30px;
+    height: 20px;
+  }
+
+  .card-main{
+    width: 100%;
+    margin-top: 0;
+
+  }
+}

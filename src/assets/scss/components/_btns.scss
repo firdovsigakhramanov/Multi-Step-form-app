@@ -1,0 +1,42 @@
+.btn {
+  border-radius: 8px;
+  padding: 11px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  background-color: map-get($btnColor, "--btn-primary");
+  color: map-get($btnColor, "--btn-secondary-text");
+}
+
+.btn-secondary {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  background-color: map-get($btnColor, "--btn-secondary-text");
+  color: map-get($btnColor, "--btn-primary-text");
+}
+
+.btn-tertiary {
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  color: map-get($btnColor, "--btn-secondary-text");
+  background-color: map-get($btnColor, "--btn-secondary");
+}
+
+@media screen and (max-width: 568px) {
+  .btn-primary,
+  .btn-tertiary {
+    right: 25px;
+  }
+
+  .btn-secondary {
+    left: 15px;
+  }
+}

@@ -1,0 +1,60 @@
+.box {
+  @include flexDirection(null, null, space-between, center, null);
+  border: 1px solid map-get($page-colors, "--input-box-shadow");
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.box:hover {
+  border: 1px solid map-get($page-colors, "--step-block-background");
+  background-color: map-get($page-colors, "--switch-container");
+}
+
+.box.active {
+  border: 1px solid map-get($page-colors, "--step-block-background");
+  background-color: map-get($page-colors, "--switch-container");
+}
+
+.box-left {
+  @include flexDirection(null, null, null, center, null);
+}
+
+.box-right {
+  font-size: 14px;
+  color: map-get($page-colors, "--step-block-background");
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.box-content {
+  margin-left: 20px;
+  margin-right: 120px;
+}
+
+.box__check-icon input {
+  width: 20px;
+  height: 20px;
+  border: 1px solid "--input-box-shadow";
+  cursor: pointer;
+}
+
+.box-content h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.box-content p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: 5px;
+  color: map-get($page-colors, "--gray-text");
+}
+
+@media screen and (max-width: 568px) {
+  .box-content{
+    margin-right: 0;
+  }
+}

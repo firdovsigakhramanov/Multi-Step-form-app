@@ -1,0 +1,71 @@
+.your-plan__box-container {
+  @include flexDirection(row, null, null, null, 20px);
+  margin-bottom: 30px;
+}
+
+// switch
+.switch-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 14px;
+  border-radius: 8px;
+  background-color: map-get($page-colors, "--switch-container");
+}
+
+.switch-block label {
+  padding-top: 5px;
+  cursor: pointer;
+  align-content: center;
+  color: map-get($page-colors, "--gray-text");
+}
+
+.switch-block span {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.switch-block__check {
+  position: relative;
+  width: 38px;
+  height: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: map-get($page-colors, "--black-text");
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.switch-block__check::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: map-get($page-colors, "--white-text");
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: 0.5s;
+}
+
+.switch-block__check:checked::before {
+  transform: translateX(147%);
+  background: map-get($page-colors, "--white-text");
+}
+
+.switch-block__check:checked ~ label > .switch-block__last-selection {
+  color: map-get($page-colors, "--black-text");
+}
+
+.switch-block__first-selection {
+  color: map-get($page-colors, "--black-text");
+}
+
+@media screen and (max-width: 568px) {
+  .your-plan__box-container {
+    @include flexDirection(column, null, null, null, 20px);
+  }
+}
