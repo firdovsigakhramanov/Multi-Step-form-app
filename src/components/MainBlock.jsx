@@ -28,6 +28,13 @@ function MainBlock({
     const [email, setEmail] = useState("firstCode@gmail.com");
     const [phone, setPhone] = useState("65464");
 
+    let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    let numberRegex = /^\d+$/;
+
+    const emailVerify = email.match(regex)
+    const phoneVerify = phone.match(numberRegex)
+
+
     function handlePrev() {
         if (step > 1) setStep(step - 1)
     }
@@ -36,7 +43,7 @@ function MainBlock({
     }
 
     function primaryStep() {
-        if (name !== "firstCode" && name !== "" && email !== "" && email !== "firstCode@gmail.com" && phone !== "" && phone !== "65464") {
+        if (name !== "firstCode" && name !== "" && emailVerify && email !== "firstCode@gmail.com" && phoneVerify && phone !== "65464") {
             handleNext()
         }
     }
@@ -60,7 +67,6 @@ function MainBlock({
         if (step < 5) setStep(step + 1)
     }
 
-    console.log(name)
     return (
         <div className='main-block' >
             <Header>{stepID?.page}</Header>
@@ -72,6 +78,8 @@ function MainBlock({
                     setName={setName}
                     phone={phone}
                     setPhone={setPhone}
+                    emailVerify={emailVerify}
+                    phoneVerify={phoneVerify}
                 />}
             {step == 2 &&
                 <YourPlan
