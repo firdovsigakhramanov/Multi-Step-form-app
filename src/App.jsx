@@ -28,14 +28,14 @@ const initialSteps = [
                     {
                         id: 2,
                         title: "Advanced",
-                        img: "./src/assets/img/advanced.svg",
+                        img: "img/advanced.svg",
                         price: 12,
                         text: "mo"
                     },
                     {
                         id: 3,
                         title: "Pro",
-                        img: "./src/assets/img/pro.svg",
+                        img: "img/pro.svg",
                         price: 15,
                         text: "mo"
                     }
@@ -44,21 +44,21 @@ const initialSteps = [
                     {
                         id: 1,
                         title: "Acrade",
-                        img: "./src/assets/img/Shape.svg",
+                        img: "img/Shape.svg",
                         price: 90,
                         text: "yr"
                     },
                     {
                         id: 2,
                         title: "Advanced",
-                        img: "./src/assets/img/advanced.svg",
+                        img: "img/advanced.svg",
                         price: 120,
                         text: "yr"
                     },
                     {
                         id: 3,
                         title: "Pro",
-                        img: "./src/assets/img/pro.svg",
+                        img: "img/pro.svg",
                         price: 150,
                         text: "yr"
                     }
