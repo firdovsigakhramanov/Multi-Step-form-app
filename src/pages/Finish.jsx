@@ -9,7 +9,7 @@ function Finish({ secondaryResult, tertiaryResult, tariff }) {
 
                     <div className='finish-list__second-left'>
                         <p>{secondaryResult.title}({tariff.charAt(0).toUpperCase() + tariff.slice(1)})</p>
-                        <span>Change</span>
+                        <span style={{display:'none'}}>Change</span>
                     </div>
                     <div className='finish-list__second-right'>
                         ${secondaryResult.price}/{secondaryResult.text}
