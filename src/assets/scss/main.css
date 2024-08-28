@@ -175,6 +175,27 @@ a {
   font-size: 16px;
 }
 
+.your-info__form span {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  margin-top: 10px;
+  color: rgb(238, 55, 74);
+  font-weight: 700;
+}
+
+.your-info__form span.de-active {
+  display: none;
+}
+
+.your-info__form input:focus {
+  border: 1px solid rgb(72, 62, 255);
+}
+
+.your-info__form input.empty {
+  border: 1px solid rgb(238, 55, 74);
+}
+
 .your-plan__box-container {
   display: flex;
   flex-direction: row;

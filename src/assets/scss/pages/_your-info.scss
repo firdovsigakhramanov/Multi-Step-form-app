@@ -1,18 +1,39 @@
 .your-info__form {
-    @include flexDirection(column, null, null, null, 20px);
-  }
-  
-  .your-info__form p {
-    font-size: 14px;
-    margin-bottom: 8px;
-    font-weight: 400;
-  }
-  
-  .your-info__form input {
-    width: 100%;
-    padding: 11px 15px;
-    border: 1px solid map-get($page-colors, "--input-box-shadow");
-    border-radius: 8px;
-    outline: none;
-    font-size: 16px;
-  }
+  @include flexDirection(column, null, null, null, 20px);
+}
+
+.your-info__form p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.your-info__form input {
+  width: 100%;
+  padding: 11px 15px;
+  border: 1px solid map-get($page-colors, "--input-box-shadow");
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+.your-info__form span {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+  margin-top: 10px;
+  color: map-get($page-colors, "--red");
+  font-weight: 700;
+}
+
+.your-info__form span.de-active{
+  display: none;
+}
+
+.your-info__form input:focus {
+  border: 1px solid map-get($page-colors, "--step-block-background");
+}
+
+.your-info__form input.empty {
+  border: 1px solid map-get($page-colors, "--red");
+}

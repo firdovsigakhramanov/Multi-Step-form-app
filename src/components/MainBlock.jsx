@@ -24,13 +24,21 @@ function MainBlock({
     const stepID = steps.find(item => item.id == step)
     const [tariff, setTariff] = useState("monthly")
     const [isChecked, setIsChecked] = useState(false)
+    const [name, setName] = useState("firstCode");
+    const [email, setEmail] = useState("firstCode@gmail.com");
+    const [phone, setPhone] = useState("65464");
 
-    function handlePrev(e) {
-        e.preventDefault();
+    function handlePrev() {
         if (step > 1) setStep(step - 1)
     }
-    function handleNext(e) {
+    function handleNext() {
         if (step < 4) setStep(step + 1)
+    }
+
+    function primaryStep() {
+        if (name !== "firstCode" && name !== "" && email !== "" && email !== "firstCode@gmail.com" && phone !== "" && phone !== "65464") {
+            handleNext()
+        }
     }
 
     function secondaryStep() {
@@ -52,11 +60,19 @@ function MainBlock({
         if (step < 5) setStep(step + 1)
     }
 
-    console.log(result, tertiaryResult)
+    console.log(name)
     return (
         <div className='main-block' >
             <Header>{stepID?.page}</Header>
-            {step == 1 && <YourInfo />}
+            {step == 1 &&
+                <YourInfo
+                    email={email}
+                    setEmail={setEmail}
+                    name={name}
+                    setName={setName}
+                    phone={phone}
+                    setPhone={setPhone}
+                />}
             {step == 2 &&
                 <YourPlan
                     step={stepID}
@@ -85,7 +101,7 @@ function MainBlock({
             }
             {
                 step == 1 &&
-                < Button onClick={handleNext} className="btn btn-primary"  >
+                < Button onClick={primaryStep} className="btn btn-primary"  >
                     Next Step
                 </ Button>
             }
