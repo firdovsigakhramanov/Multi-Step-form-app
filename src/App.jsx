@@ -21,7 +21,7 @@ const initialSteps = [
                     {
                         id: 1,
                         title: "Acrade",
-                        img: "./src/assets/img/Shape.svg",
+                        img: "img/Shape.svg",
                         price: 9,
                         text: "mo"
                     },
