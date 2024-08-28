@@ -1,5 +1,5 @@
 import React from 'react'
-import Figures from './figures'
+import Figures from './Figures'
 import Steps from './Steps'
 
 function StepBlock({ steps, step }) {
